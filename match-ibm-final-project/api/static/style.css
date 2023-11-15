@@ -1,0 +1,245 @@
+* {
+  font-family: Playfair Display;
+}
+
+:root {
+  --dark-green: #132a13;
+  --sea-green: #198754;
+  --fern-green: #337133;
+
+  --corPrincipal: rgb(224, 224, 117);
+  --corSecundaria: black;
+  --corTexto1: rgb(26, 27, 86);
+  --corTexto1Clara: rgb(27, 29, 125);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+.page {
+  padding: 5%;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+  background: radial-gradient(
+    circle,
+    var(--fern-green) 10%,
+    var(--dark-green) 200%
+  );
+  align-items: center;
+}
+
+.m-2 {
+  margin: 5px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fit-content {
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 10px;
+  border: var(--corTexto1Clara) 1px solid;
+  box-shadow: 0 0 10px 0 var(--corTexto1Clara);
+  margin: 10px;
+  text-wrap: wrap;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset {
+  /* background: linear-gradient(
+    180deg,
+    var(--sea-green) -100%,
+    var(--fern-green) 20%,
+    #1a3a1a 55%,
+    var(--fern-green) 90%,
+    var(--sea-green) 200%
+  ); */
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+legend {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  /* padding: 8px; */
+  /* border-radius: 5px; */
+}
+
+.fixed-responsive-width {
+  width: 70vw !important;
+  max-width: 600px !important;
+  min-width: 300px;
+}
+
+.large-text {
+  font-size: 4rem;
+}
+
+.medium-text {
+  font-size: 2rem;
+}
+
+.small-text {
+  font-size: 1.3rem;
+}
+
+#response-message {
+  margin: 15px auto;
+}
+
+/*  */
+
+#cabecalho {
+  background: url(../static/img/bgazul.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  /* background-repeat: no-repeat; */
+  justify-content: space-around; /*igualmente espaçado em relação às bordas*/
+  color: var(--corPrincipal);
+  padding: 2em;
+  display: grid; /*permite manipular os elementos filhos*/
+  place-items: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 25px;
+}
+
+#formulario {
+  min-height: 730px;
+  background: url(../static/img/glass-jar-full-money-front-decreasing-stacked-coins-against-white-background.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+  margin: auto;
+}
+
+#formulario-cadastro p {
+  color: var(--corTexto1);
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.grupo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+
+.grupo-form label {
+  color: var(--corTexto1);
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.grupo-form input {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none; /*remove a linha ao redor do campo*/
+}
+
+input[type="button"] {
+  background-color: var(--corTexto1);
+  background-size: cover;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /*aciona a mãozinha ao passar o mouse no botão*/
+  opacity: 0.5px;
+}
+
+.botao.hover {
+  /*ao passar o cursor por cima do botão*/
+  opacity: 1px;
+}
+
+#rodape {
+  background-color: var(--corTexto1);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5px;
+  color: var(--corPrincipal);
+  font-weight: bold;
+  padding: 2em;
+  text-align: center;
+}
+
+#contatos {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#nomes {
+  font-size: 18 px;
+  font-weight: normal;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #formulario {
+    height: 870px;
+  }
+}
